@@ -129,7 +129,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-data/
+LLM_basics/data/
 
 # Spyder project settings
 .spyderproject
