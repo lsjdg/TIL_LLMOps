@@ -1,5 +1,5 @@
 # TIL_LLMOps
-Today I Learned to be an LLMOps Engineer
+Today I Learned to be a LLMOps Engineer
 
 # Goals
 ## Must Have
