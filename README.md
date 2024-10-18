@@ -18,4 +18,9 @@ Today I Learned to be a LLMOps Engineer
 * notebooks
     * notebooks for learning NLP and language models (PLM, LLM)
     * reference : K-Digital Training - MLOps @ Toss Bank
-
+* projects
+    * mini projects using RoBERTa for:
+        * Named Entity Recognition
+        * Relation Extraction
+        * Sentimantic Textual Similarity
+        * Text Classification
