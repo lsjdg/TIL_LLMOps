@@ -14,8 +14,8 @@ Today I Learned to be a LLMOps Engineer
 * About missions my company concentrates on
 
 # Features
-## LLM Basics
+## Language Models
 * notebooks
-    * notebooks for learning NLP and LLM basics
-    * reference : K-Digital Training: MLOps @ Toss Bank
+    * notebooks for learning NLP and language models (PLM, LLM)
+    * reference : K-Digital Training - MLOps @ Toss Bank
 
