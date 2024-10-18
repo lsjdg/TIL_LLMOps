@@ -15,6 +15,7 @@ Today I Learned to be a LLMOps Engineer
 
 # Features
 ## Language Models
+* velog series : https://velog.io/@jjdg148/series/LLM-Basics
 * notebooks
     * notebooks for learning NLP and language models (PLM, LLM)
     * reference : K-Digital Training - MLOps @ Toss Bank
