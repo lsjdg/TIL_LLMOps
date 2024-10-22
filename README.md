@@ -25,3 +25,5 @@ Today I Learned to be a LLMOps Engineer
         * Relation Extraction
         * Sentimantic Textual Similarity
         * Text Classification
+## Data Engineering
+* notebooks
