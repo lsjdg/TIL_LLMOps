@@ -26,4 +26,8 @@ Today I Learned to be a LLMOps Engineer
         * Sentimantic Textual Similarity
         * Text Classification
 ## Data Engineering
-* notebooks
+* DVC excercises
+* MySQL projects
+
+## MLOps
+* MLFlow
