@@ -1,12 +1,19 @@
 from flask import Flask, request, jsonify
-from chatbot.chatbot import Chatbot, Retriever
+from bots.chatbot import Chatbot
+from loaders.builder import VectorStore
+from dotenv import load_dotenv
+from chromadb.config import Settings
+from langchain_openai import OpenAIEmbeddings
 
+load_dotenv()
 
+vectordb = vectordb = VectorStore(
+    collection_name="toss_kids_account",
+    embedding_function=OpenAIEmbeddings(),
+    client_settings=Settings(persist_directory="data/db", is_persistent=True),
+)
 llm = Chatbot(
-    model_name="gpt-4o-mini",
-    streaming=False,
-    temperatrue=0,
-    retriever=Retriever("tossbank_kids_account").get_retriever(),
+    model_name="gpt-4o-mini", streaming=False, temperatrue=0, vectorstore=vectordb
 )
 
 app = Flask(__name__)

@@ -1,6 +1,6 @@
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
-from dataloader import Loader
+from loaders.dataloader import Loader
 from chromadb.config import Settings
 from dotenv import load_dotenv
 
@@ -12,9 +12,6 @@ class VectorStore(Chroma):
             embedding_function=embedding_function,
             client_settings=client_settings,
         )
-
-        # self.loader = Loader("data/kids_account")
-        # self.add_to_store(self.loader.docs)
 
     def add_docs(self, loader):
         """
@@ -48,7 +45,7 @@ class VectorStore(Chroma):
                 documents=new_docs, embeddings=new_embeddings, ids=new_ids
             )
         else:
-            print("no new docs - check for data with same IDs")
+            print("no new docs - data with same IDs ignored")
 
 
 if __name__ == "__main__":
