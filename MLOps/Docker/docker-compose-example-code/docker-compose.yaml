@@ -1,0 +1,38 @@
+name: my_goal
+
+services:
+  mongodb:
+    image: 'mongo'
+    volumes:
+      - data:/data/db
+    env_file:
+      - ./env/mongo.env
+
+  backend:
+    build: ./backend
+    # dockerfile: Dockerfile -> 미지정시 자동으로 ./backend 에서 Dockerfile 탐색
+    ports:
+      - '80:80'
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app/ # docker-compose 에서는 상대경로로 bind mount 
+      - /app/node_modules
+    env_file:
+        - ./env/backend.env
+    depends_on: 
+      - mongodb # mongodb 컨테이너 오류 시 backend 컨테이너 실행 방지
+
+  frontend:
+    build: ./frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend/src:/app/src
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+
+volumes:
+  data:
+  logs:
