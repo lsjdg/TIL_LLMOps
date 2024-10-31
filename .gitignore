@@ -131,6 +131,8 @@ env.bak/
 venv.bak/
 Language_Models/data/
 MLOps/TossChatbot/data
+.DS_Store
+
 
 # Spyder project settings
 .spyderproject
